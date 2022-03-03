@@ -1,4 +1,4 @@
-run = ["cargo", "build", "--release"]
+run = "cargo build --release"
 
 entrypoint = "src/main.rs"
 

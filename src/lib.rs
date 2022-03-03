@@ -2,7 +2,7 @@ extern crate cpython;
 use cpython::*;
 py_module_initializer! {primes, |py, m| {
 	m.add(py, "__doc__", "primesupto(n: int)\n`list` of primes up to n")?;
-	m.add(py, "primesupto", py_fn!(py,primesupto(n:usize)))
+	m.add(py, "primesupto", py_fn!(py, primesupto(n: usize)))
 }}
 fn primesupto(_: Python, n: usize) -> PyResult<Vec<usize>> {
 	let mut sieve = vec![true; n / 2];
